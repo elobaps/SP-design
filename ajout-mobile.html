@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Integration responsive : AJOUT</title>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style.css">
+	<link rel="author" href="humans.txt">
+</head>
+
+<body id="ajout-post">
+
+	<script type="text/javascript">
+		function getfile() {
+			document.getElementById('hiddenfile').click();
+			document.getElementById('selectedfile').value document.getElementById('hiddenfile').value
+		}
+	</script>
+	<div class="main">
+		<!--   Contenu principal-->
+		<div class="bloc-ajout-container">
+			<div class="heading-ajout">
+				<h2>Ajout d'une photo ou d'une vidéo</h2>
+			</div>
+			<div class="formulaire-ajout-post">
+				<form name="ajout-post" action="#" method="post">
+					<input type="titre" name="titre" placeholder="Titre/humeur">
+					<input type="file" id="hiddenfile" style="display:none" />
+					<input type="button" value="+" onclick="getfile()" />
+					<input type="text" name="description" placeholder="Description">
+				</form>
+			</div>
+			<div class="formulaire-pictos-post">
+				<form name="ajout-post-pictos" action="#" method="post">
+					<a href="#1" id="edition-picto" title="Editer la photo"></a>
+					<a href="#2" id="geolocalisation-picto" title="Se géocaliser"></a>
+					<input type="submit" name="Envoyer-post" id="picto-envoyer" value="">
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
