@@ -1,559 +1,796 @@
-/* ----------------------------- */
-/* == soft reset KNACSS          */
-/* ----------------------------- */
-/* switching box model for all elements */
-* {
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-box-sizing: border-box;
-}
-/* soft reset */
-html,
-body {
-margin: 0;
-padding: 0;
-height: 100%;
-}
-ul,
-ol {
-padding-left: 2em;
-}
-ul.unstyled {
-list-style: none;
-}
-img {
-height: auto;
-vertical-align: middle;
-border: 0;
-}
-blockquote,
-figure {
-margin-left: 0;
-margin-right: 0;
-}
-audio,
-canvas,
-video {
-display: inline-block;
-}
-svg:not(:root) {
-overflow: hidden;
-}
-/* font-sizing for content */
-p,
-.p-like,
-ul,
-ol,
-dl,
-blockquote,
-pre,
-td,
-th,
-label,
-textarea,
-caption,
-details,
-figure {
-margin-top: 0.75em;
-line-height: 1.5;
-}
-ul,
-ol {
-padding-left: 2em;
-}
-ul.unstyled {
-list-style: none;
-}
-em,
-.italic,
-address,
-cite,
-dfn,
-i,
-var {
-font-style: italic;
-}
-strong,
-.bold {
-font-weight: bold;
-}
-/* avoid top margins on first content element */
-p:first-child,
-.p-like:first-child,
-ul:first-child,
-ol:first-child,
-dl:first-child,
-blockquote:first-child,
-pre:first-child,
-h1:first-child,
-h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child,
-h6:first-child {
-margin-top: 0;
-margin-bottom: 0;
-}
-/* avoid margins on nested elements */
-li p,
-li .p-like,
-li ul,
-li ol {
-margin-top: 0;
-margin-bottom: 0;
-}
-/* max values */
-img,
-table,
-td,
-blockquote,
-code,
-pre,
-textarea,
-input,
-video {
-max-width: 100%;
-}
-img {
-height: auto;
-vertical-align: middle;
-border: 0;
-}
-a img {
-border: none;
-}
-.clearfix:after {
-visibility: hidden;
-display: block;
-font-size: 0;
-content: " ";
-clear: both;
-height: 0;
-}
-.clearfix {
-display: inline-block;
-}
-* html .clearfix {
-height: 1%
-}
-.clearfix {
-display: block;
-}
-
-
-/* ----------------------------- */
-/* == GLOBAL CSS                 */
-/* ----------------------------- */
-
-.right {
-float: right;
-}
-.left {
-float: left;
-}
-.main {
-width: 100%;
-}
-
-body#home {
-    background-image: url('img/home-bckg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-body#wall {
-    background-color: rgb(216,225,231);
-    background-repeat: no-repeat;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-body#ajout-post {
-    background-image: url('img/home-bckg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-left: auto;
-    margin-right: auto;
-}
-/* ----------------------------- */
-/* == HEADER                     */
-/* ----------------------------- */
-
-.branding  {
-    text-align: center;
-    padding-top: 16px;
-}
+ /* ----------------------------- */
+ /* == soft reset KNACSS          */
+ /* ----------------------------- */
+ /* switching box model for all elements */
  
-.search-bar {
-    display: inline;
-    text-align: center;
-    width: 80%;
-}
-.search-bar .loupe {
-    display:block;
-    width:12.8712871%;
-    height:31px;
-    margin:0;
-}
-
-.search-bar >form {
-    width: 80%;
-    margin-left :auto;
-    margin-right: auto;
-}
+ * {
+ 	-webkit-box-sizing: border-box;
+ 	-moz-box-sizing: border-box;
+ 	box-sizing: border-box;
+ }
+ /* soft reset */
  
-.search-bar input[type="text"] {
-    background:url(img/loupe.png) no-repeat 0 0;
-    background-color: rgb(255,255,255);
-    width:78.90625%;
-    height:41px;
-    border : none;
-    border-radius: 3px;
-    padding-left: 30px;
-}
-
-.menu-nav {
-    float: right;
-    width :20.703125%;
-    
-}
-
- .ajout-photo-wall >form {
-    text-align: center;
-    margin-left: auto; 
-    margin-right: auto;
+ html,
+ body {
+ 	margin: 0;
+ 	padding: 0;
+ 	height: 100%;
+ }
+ 
+ ul,
+ ol {
+ 	padding-left: 2em;
+ }
+ 
+ ul.unstyled {
+ 	list-style: none;
+ }
+ 
+ img {
+ 	height: auto;
+ 	vertical-align: middle;
+ 	border: 0;
+ }
+ 
+ blockquote,
+ figure {
+ 	margin-left: 0;
+ 	margin-right: 0;
+ }
+ 
+ audio,
+ canvas,
+ video {
+ 	display: inline-block;
+ }
+ 
+ svg:not(:root) {
+ 	overflow: hidden;
+ }
+ /* font-sizing for content */
+ 
+ p,
+ .p-like,
+ ul,
+ ol,
+ dl,
+ blockquote,
+ pre,
+ td,
+ th,
+ label,
+ textarea,
+ caption,
+ details,
+ figure {
+ 	margin-top: 0.75em;
+ 	line-height: 1.5;
+ }
+ 
+ ul,
+ ol {
+ 	padding-left: 2em;
+ }
+ 
+ ul.unstyled {
+ 	list-style: none;
+ }
+ 
+ em,
+ .italic,
+ address,
+ cite,
+ dfn,
+ i,
+ var {
+ 	font-style: italic;
+ }
+ 
+ strong,
+ .bold {
+ 	font-weight: bold;
+ }
+ /* avoid top margins on first content element */
+ 
+ p:first-child,
+ .p-like:first-child,
+ ul:first-child,
+ ol:first-child,
+ dl:first-child,
+ blockquote:first-child,
+ pre:first-child,
+ h1:first-child,
+ h2:first-child,
+ h3:first-child,
+ h4:first-child,
+ h5:first-child,
+ h6:first-child {
+ 	margin-top: 0;
+ 	margin-bottom: 0;
+ }
+ /* avoid margins on nested elements */
+ 
+ li p,
+ li .p-like,
+ li ul,
+ li ol {
+ 	margin-top: 0;
+ 	margin-bottom: 0;
+ }
+ /* max values */
+ 
+ img,
+ table,
+ td,
+ blockquote,
+ code,
+ pre,
+ textarea,
+ input,
+ video {
+ 	max-width: 100%;
+ }
+ 
+ img {
+ 	height: auto;
+ 	vertical-align: middle;
+ 	border: 0;
+ }
+ 
+ a img {
+ 	border: none;
+ }
+ 
+ .clearfix:after {
+ 	visibility: hidden;
+ 	display: block;
+ 	font-size: 0;
+ 	content: " ";
+ 	clear: both;
+ 	height: 0;
+ }
+ 
+ .clearfix {
+ 	display: inline-block;
+ }
+ 
+ * html .clearfix {
+ 	height: 1%
+ }
+ 
+ .clearfix {
+ 	display: block;
+ }
+ /* ----------------------------- */
+ /* == GLOBAL CSS                 */
+ /* ----------------------------- */
+ 
+ .right {
+ 	float: right;
+ }
+ 
+ .left {
+ 	float: left;
+ }
+ 
+ .main {
+ 	width: 100%;
+ }
+ 
+ body#home {
+ 	background-image: url('img/home-bckg.png');
+ 	background-repeat: no-repeat;
+ 	background-size: cover;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ }
+ 
+ body#wall {
+ 	background-color: rgb(216, 225, 231);
+ 	background-repeat: no-repeat;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ }
+ 
+ body#ajout-post {
+ 	background-image: url('img/home-bckg.png');
+ 	background-repeat: no-repeat;
+ 	background-size: cover;
+ 	margin-left: auto;
+ 	margin-right: auto;
  }
 
-.ajout-photo-wall input[type="submit"] {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    background-color: rgb(25,162,236);
-    color: rgb(255,255,255);
-    border:none;
-    width: 80%;
-    height: 41px;
-    border-radius: 3px;
-    margin-top: 18px;
-    margin-bottom: 24px;
-}
-/* ----------------------------- */
-/* == MAIN CSS HOME              */
-/* ----------------------------- */
+ .row,
+ .col {
+ 	overflow: hidden;
+ }
+ 
+ .grid {
+ 	margin: 0 auto;
+ 	max-width: 984px;
+ }
 
-.presentation {
-    font-family: 'Lato', sans-serif;
-    color: rgb(255,255,255);
-    font-weight: 300;
-    width: 74.6875%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 16px;
-    padding-bottom: 15px;
-    font-size : 16px;
-     text-align: center;
-}
+ 
+ @media all and (min-width: 40em) {
+ 	.col {
+ 		float: left;
+ 	}
+ 	.col-1 {
+ 		width: 16.666666667%;
+ 	}
+ 	.col-2 {
+ 		width: 33.333333334%;
+ 	}
+ 	.col-3 {
+ 		width: 50%;
+ 	}
+ 	.col-4 {
+ 		width: 66.666666668%;
+ 	}
+ 	.col-5 {
+ 		width: 83.333333335 %;
+ 	}
+ 	.col-6 {
+ 		width: 100%;
+ 	}
+ }
 
-.connexion-container {
-    padding-top: 23px;
-    height: 217px;
-    width: 74.6875%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgba(255,255,255,0.4);
-    border-radius: 3px;
+ /* ----------------------------- */
+ /* == HEADER                     */
+ /* ----------------------------- */
+ 
+ .branding {
+ 	text-align: center;
+ 	padding-top: 16px;
+ }
+ 
+@media all and (max-width:60em) {
+	    .logo-desktop {
+		display: none;
+	}
 }
-
-.connexion-container > form{
-    width : 84.5188285%;
-    height: 183px;
-    text-align: center;
-    margin-left: auto; 
-    margin-right: auto;
-}
-
-.connexion-container > form > a{
-    font-size : 10px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    margin-top: 10px;
-}
-
-.connexion-container > form > input {
-    display: inline-block;
-}
-
-.connexion-container input[type="email"],
-.connexion-container input[type="text"]{
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    color: rgb(133,136,124);
-    border:none;
-    margin-bottom: 13px;
-    width: 100%;
-    height: 41px;
-    border-radius: 3px;
-    padding-left: 4px;
-}
-.connexion-container input[type="submit"] {
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    background-color: rgb(2,136,209);
-    color: rgb(255,255,255);
-    border:none;
-    width: 85.2216749%;
-    height: 41px;
-    padding-left: 4px;
-    border-radius: 3px;
-    margin-top: 6px;
-    margin-bottom: 7px;
-box-shadow: 3px 3px rgba(2, 136, 209, 0.25);
--moz-box-shadow: 3px 3px rgba(2, 136, 209, 0.25);
--webkit-box-shadow: 3px 3px rgba(2, 136, 209, 0.25);
-}
-
-.inscription {
-    text-align: center;
-}
-
-.inscription > form > input {
-    display: inline-block;
-}
-
-.inscription input[type="submit"] {
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    background-color: rgb(31,156,105);
-    color: rgb(255,255,255);
-    border:none;
-    width: 88.125%;
-    height: 41px;
-    border-radius: 3px;
-    margin-top: 5px;
-box-shadow: 3px 3px rgba(31,156,105, 0.25);
--moz-box-shadow: 3px 3px rgba(31,156,105, 0.25);
--webkit-box-shadow: 3px 3px rgba(31,156,105, 0.25);   
-}
-
-/* ----------------------------- */
-/* == MAIN CSS WALL              */
-/* ----------------------------- */
-
-.post1-container,
-.post2-container{
-    height: 303px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgb(241,241,241);
-    border-radius: 1px;
-    box-shadow: 1px 1px 8px rgba(1,1,1,0.26);
--moz-box-shadow: 1px 1px 8px rgba(1,1,1,0.26);
--webkit-box-shadow: 1px 1px 8px rgba(1,1,1,0.26);  
-}
-
-.post1-container h2,
-.post2-container h2{
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    text-align: center;
-    padding-top:14px ;
-    padding-bottom: 12px;
-}
-.post2 {
-    padding-top: 24px;
-}
-.photo-post {
-    text-align: center;
-}
-
-.description p {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    width: 92.96875%;
-    padding-left: 10px;
-    margin: 0;
-    padding-top: 8px;
-}
-.grid2 {
-    float: left;
-    width: 92.96875%;
-    display: inline-flex;
-    padding-top : 6px;
-}
-
-.profil-grid2 {
-    width: 59.3220339%;
-    padding-left: 10px;
-}
-
-.lieu-grid2 {
-     width: 40.6779661%;
-}
-    
-.profil-grid2 p,
-.lieu-grid2 p{
-    font-size: 9px;
-    display: inline;
-}
-
-.boutons-grid3 {
-    border-top: 1px solid rgb(213,213,213) ;
-    padding-top: 1px;
-     float: left;
-     width: 100%;
-     display: inline-flex;
-}
-
-.bouton-like {
-    border-right: 1px solid rgb(213,213,213) ;
-    width :33.203125%;
-    text-align: center;
-}
-
-.bouton-commentaires {
-    border-right: 1px solid rgb(213,213,213) ;
-    width :33.203125%;
-    text-align: center;
-}
-
-.bouton-share {
-    width :33.203125%;
-    text-align: center;
-}
-
-
-/* ----------------------------- */
-/* == MAIN CSS AJOUT             */
-/* ----------------------------- */
-
-.bloc-ajout-container {
-    width: 93.75%;
-    height:470px;
-    background-color: rgb(241,241,242);
-    border-radius: 3px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 14px;
-}
-
-.heading-ajout h2 {
-	 font-family: 'Lato', sans-serif;
-    font-size: 17px;
-    font-weight: 700;
-    text-align: center;
-}
-
-.heading-ajout {
-    width: 100%;
-    height : 46px;
-    background-color: rgb(250,250,251);
-    padding-top :13px;
-    border-radius: 3px;
-    border-bottom: 1px solid rgb(213,213,213);
-    
-}
-.bloc-ajout-container {
-   width: 93.75%;
-}
-
-.formulaire-ajout-post > form > input {
-    display: block;
-}
-
-.formulaire-ajout-post input[type="titre"] {
+ .search-bar {
+ 	display: inline;
+ 	text-align: center;
+ 	width: 80%;
+ }
+ 
+ .search-bar .loupe {
+ 	display: block;
+ 	width: 12.8712871%;
+ 	height: 31px;
+ 	margin: 0;
+ }
+ 
+ .search-bar >form {
+ 	width: 80%;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ }
+ 
+ .search-bar input[type="text"] {
+ 	background: url(img/loupe.png) no-repeat 0 0;
+ 	background-color: rgb(255, 255, 255);
+ 	width: 78.90625%;
+ 	height: 41px;
+ 	border: none;
+ 	border-radius: 3px;
+ 	padding-left: 30px;
+ }
+ 
+ .menu-nav {
+ 	float: right;
+ 	width: 20.703125%;
+ }
+ 
+ .ajout-photo-wall >form {
+ 	text-align: center;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ }
+ 
+ .ajout-photo-wall input[type="submit"] {
+ 	font-family: 'Lato', sans-serif;
+ 	font-weight: 400;
+ 	font-size: 15px;
+ 	background-color: rgb(25, 162, 236);
+ 	color: rgb(255, 255, 255);
+ 	border: none;
+ 	width: 80%;
+ 	height: 41px;
+ 	border-radius: 3px;
+ 	margin-top: 18px;
+ 	margin-bottom: 24px;
+ }
+ /* ----------------------------- */
+ /* == MAIN CSS HOME              */
+ /* ----------------------------- */
+ 
+ .section p {
+	color: rgb(255, 255, 255);
+ 	font-family: 'Lato', sans-serif;
 	font-size: 16px;
-	font-weight: 400;
-    background-color: rgb(250,250,251);
-    width : 80.9375%;
-    height: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 14px;
-    border-radius: 3px;
-    margin-top :10px;
-    border: none;   
-}
-
-.formulaire-ajout-post input[type="button"] {
-	font-family: 'Lato', sans-serif;
-	font-weight: 300;
-    background-color: rgb(250,250,251);
-    width : 80.9375%;
-    height: 184px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 3px;
-    margin-top :10px;
-    border: none; 
-	font-size: 60px;
-}
-
-.formulaire-ajout-post input[type="text"] {
-	font-family: 'Lato', sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-    background-color: rgb(250,250,251);
-    width : 80.9375%;
-    height: 117px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 14px;
-    padding-top : -20px;
-    border-radius: 3px;
-    margin-top :10px;
-	border: none;
-}
-
-.formulaire-pictos-post {	
-	text-align: center;
-}
-
-.formulaire-pictos-post > form {
-	padding-top: 10px;
-	display: inline-flex;
+ 	font-weight: 300;
 	margin-left: auto;
 	margin-right: auto;
+	padding-bottom: 15px;
+	padding-top: 16px;
+ 	text-align: center;
+	padding-top: 16px;
+	width: 74.6875%;
+ } 
+/*Tablet*/
+@media all and (min-width:40em) {
+	.section p {
+		font-size: 18px;
+		padding-bottom: 100px;
+		padding-top: 91px;
+	}
+}
+/*Desktop*/
+@media all and (min-width:60em) {
+	.section p {
+		font-size: 22px;
+	}
+}
+ 
+ .connexion-container {
+	background-color: rgba(255, 255, 255, 0.4);
+ 	border-radius: 3px;
+	height: 217px;
+	margin-left: auto;
+ 	margin-right: auto;
+ 	padding-top: 23px;
+	width: 74.6875%;
+ }
+
+/*Tablet*/
+@media all and (min-width:40em) {
+	.connexion-container {
+		height: 170px;
+		width: 87.1794872%;
+	}
+}
+ 
+/*Desktop*/
+@media all and (min-width:60em) {
+	.connexion-container {
+		width: 78.125%;
+	}
 }
 
-.formulaire-pictos-post >form > a#edition-picto {
-	background-color: rgb(2,136,209);
-	width:82px;
-	height:40px;
-	border-radius: 3px;
-	background-image: url(img/picto-edition.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	margin-right: 6px;
+ .connexion-container > form {
+	height: 183px;
+	margin-left: auto;
+ 	margin-right: auto;
+	text-align: center;
+ 	width: 84.5188285%;
+ }
+
+/*Tablet*/
+@media all and (min-width:40em) {
+	.connexion-container > form {
+		width: 88.5128205%;
+	}
+}
+ 
+/*Desktop*/
+@media all and (min-width:60em) {
+	.connexion-container > form {
+		width: 94.625%;
+	}
 }
 
-.formulaire-pictos-post >form > a#geolocalisation-picto {
-	background-color: rgb(2,136,209);
-	width:82px;
-	height:40px;
-	border-radius: 3px;
-	background-image: url(img/picto-geolocalisation.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	margin-right: 6px;
+ .connexion-container > form > a {
+ 	font-size: 10px;
+ 	font-family: 'Lato', sans-serif;
+ 	font-weight: 700;
+ 	margin-top: 10px;
+ }
+
+/*Tablet*/
+@media all and (min-width:40em) {
+	.connexion-container > form > a {
+		font-size: 15px;
+		float: right;
+		margin-right: 50px;
+		margin-top: -6px;
+	}
+}
+ 
+ .connexion-container > form > input {
+ 	display: inline-block;
+ }
+ 
+
+/*Tablet*/
+@media all and (min-width:40em) {
+	.connexion-container > form > input {
+		display: inline-flex;
+	}
 }
 
-.formulaire-pictos-post input[type="submit"] {
- 	background-color: rgb(255,228,64);
-	width:82px;
-	height:40px;
-	border-radius: 3px;
-	background-image: url(img/picto-envoie.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	margin-right: 6px;
-	border:none;
-	
+ .connexion-container input[type="email"],
+ .connexion-container input[type="text"] {
+ 	font-family: 'Lato', sans-serif;
+ 	font-weight: 400;
+ 	font-size: 16px;
+ 	color: rgb(133, 136, 124);
+ 	border: none;
+ 	margin-bottom: 13px;
+ 	width: 100%;
+ 	height: 41px;
+ 	border-radius: 3px;
+ 	padding-left: 4px;
+ }
+ 
+/*Tablet*/
+@media all and (min-width:40em) {
+	  .connexion-container input[type="email"],
+      .connexion-container input[type="text"] {
+		 font-size: 17px;
+		 margin-right: 27px;
+		 width: 27.8471338%;
+	}
 }
+
+/*Desktop*/
+@media all and (min-width:60em) {
+	  .connexion-container input[type="email"],
+      .connexion-container input[type="text"] {
+		 width: 29.8471338%;
+	}
+}
+
+ .connexion-container input[type="submit"] {
+ 	font-family: 'Lato', sans-serif;
+ 	font-weight: 700;
+ 	font-size: 16px;
+ 	background-color: rgb(2, 136, 209);
+ 	color: rgb(255, 255, 255);
+ 	border: none;
+ 	width: 85.2216749%;
+ 	height: 41px;
+ 	padding-left: 4px;
+ 	border-radius: 3px;
+ 	margin-top: 6px;
+ 	margin-bottom: 7px;
+ 	box-shadow: 3px 3px rgba(2, 136, 209, 0.25);
+ 	-moz-box-shadow: 3px 3px rgba(2, 136, 209, 0.25);
+ 	-webkit-box-shadow: 3px 3px rgba(2, 136, 209, 0.25);
+ }
+ 
+/*Tablet*/
+@media all and (min-width:40em) {
+	  .connexion-container input[type="submit"] {
+		 font-size: 17px;
+		 margin-right: 27px;
+		 width: 23.5477707%;
+		 margin-top: 50px;
+	}
+}
+
+/*Tablet*/
+@media all and (min-width:60em) {
+	  .connexion-container input[type="submit"] {
+		 width: 25.5477707%;
+	}
+}
+
+ .inscription {
+ 	text-align: center;
+ }
+ 
+ .inscription > form > input {
+ 	display: inline-block;
+ }
+ 
+ .inscription input[type="submit"] {
+ 	font-family: 'Lato', sans-serif;
+ 	font-weight: 700;
+ 	font-size: 16px;
+ 	background-color: rgb(31, 156, 105);
+ 	color: rgb(255, 255, 255);
+ 	border: none;
+ 	width: 88.125%;
+ 	height: 41px;
+ 	border-radius: 3px;
+ 	margin-top: 5px;
+ 	box-shadow: 3px 3px rgba(31, 156, 105, 0.25);
+ 	-moz-box-shadow: 3px 3px rgba(31, 156, 105, 0.25);
+ 	-webkit-box-shadow: 3px 3px rgba(31, 156, 105, 0.25);
+ }
+
+/*Tablet*/
+@media all and (min-width:40em) {
+	  .inscription input[type="submit"] {
+		 font-size: 17px;
+		 width: 71.7948718%;
+		 margin-top: 57px;
+	}
+}
+
+/*Desktop*/
+@media all and (min-width:60em) {
+	  .inscription input[type="submit"] {
+		   width: 56.640625%;
+	}
+}
+
+ /* ----------------------------- */
+ /* == FOOTER CSS HOME            */
+ /* ----------------------------- */
+
+@media all and (max-width:40em) {
+	    footer {
+		display: none;
+	}
+}
+
+/*Tablet*/
+@media all and (min-width:40em) {
+	    footer {
+		background-color: rgba(1,1,1,0.74);
+		color : rgb(255,255,255);
+		height: 150px;
+		margin-top: 78px;
+	}
+}
+
+@media all and (min-width:40em) {
+	    footer p{
+		font-family: 'Lato', sans-serif;
+		font-size: 14px;
+		font-weight: 300;
+		text-align: center;
+		padding-top: 45px;
+	}
+}
+@media all and (min-width:40em) {
+	    footer a {
+		font-family: 'Lato', sans-serif;
+		font-weight: 700;
+		text-decoration: underline;
+		text-align: center;
+		padding-top: 45px;
+	}
+}
+
+/*Desktop*/
+@media all and (min-width:60em) {
+	    footer p{
+		font-size: 16px;
+	}
+}
+
+
+ /* ----------------------------- */
+ /* == MAIN CSS WALL              */
+ /* ----------------------------- */
+ 
+ .post1-container,
+ .post2-container {
+ 	height: 303px;
+ 	width: 80%;
+ 	margin-left: auto;
+ 	margin-right: auto;
+	margin-bottom: 14px;
+ 	background-color: rgb(241, 241, 241);
+ 	border-radius: 1px;
+ 	box-shadow: 1px 1px 8px rgba(1, 1, 1, 0.26);
+ 	-moz-box-shadow: 1px 1px 8px rgba(1, 1, 1, 0.26);
+ 	-webkit-box-shadow: 1px 1px 8px rgba(1, 1, 1, 0.26);
+ }
+
+/*Tablet*/
+@media all and (min-width:40em) {
+	    .post1-container,
+ 		.post2-container {
+		width: 40.5128205%;
+	}
+}
+
+
+/*Desktop*/
+
+ 
+ .post1-container h2,
+ .post2-container h2 {
+ 	font-family: 'Lato', sans-serif;
+ 	font-weight: 700;
+ 	font-size: 14px;
+ 	text-align: center;
+ 	padding-top: 14px;
+ 	padding-bottom: 12px;
+ }
+ 
+ .post2 {
+ 	padding-top: 24px;
+ }
+ 
+ .photo-post {
+ 	text-align: center;
+ }
+ 
+ .description p {
+ 	font-family: 'Lato', sans-serif;
+ 	font-weight: 400;
+ 	font-size: 12px;
+ 	width: 92.96875%;
+ 	padding-left: 10px;
+ 	margin: 0;
+ 	padding-top: 8px;
+ }
+ 
+ .grid2 {
+ 	float: left;
+ 	width: 92.96875%;
+ 	display: inline-flex;
+ 	padding-top: 6px;
+ }
+ 
+ .profil-grid2 {
+ 	width: 59.3220339%;
+ 	padding-left: 10px;
+ }
+ 
+ .lieu-grid2 {
+ 	width: 40.6779661%;
+ }
+ 
+ .profil-grid2 p,
+ .lieu-grid2 p {
+ 	font-size: 9px;
+ 	display: inline;
+ }
+ 
+ .boutons-grid3 {
+ 	border-top: 1px solid rgb(213, 213, 213);
+ 	padding-top: 1px;
+ 	float: left;
+ 	width: 100%;
+ 	display: inline-flex;
+ }
+ 
+ .bouton-like {
+ 	border-right: 1px solid rgb(213, 213, 213);
+ 	width: 33.203125%;
+ 	text-align: center;
+ }
+ 
+ .bouton-commentaires {
+ 	border-right: 1px solid rgb(213, 213, 213);
+ 	width: 33.203125%;
+ 	text-align: center;
+ }
+ 
+ .bouton-share {
+ 	width: 33.203125%;
+ 	text-align: center;
+ }
+ /* ----------------------------- */
+ /* == MAIN CSS AJOUT             */
+ /* ----------------------------- */
+ 
+ .bloc-ajout-container {
+ 	width: 93.75%;
+ 	height: 470px;
+ 	background-color: rgb(241, 241, 242);
+ 	border-radius: 3px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	margin-top: 14px;
+ }
+ 
+ .heading-ajout h2 {
+ 	font-family: 'Lato', sans-serif;
+ 	font-size: 17px;
+ 	font-weight: 700;
+ 	text-align: center;
+ }
+ 
+ .heading-ajout {
+ 	width: 100%;
+ 	height: 46px;
+ 	background-color: rgb(250, 250, 251);
+ 	padding-top: 13px;
+ 	border-radius: 3px;
+ 	border-bottom: 1px solid rgb(213, 213, 213);
+ }
+ 
+ .bloc-ajout-container {
+ 	width: 93.75%;
+ }
+ 
+ .formulaire-ajout-post > form > input {
+ 	display: block;
+ }
+ 
+ .formulaire-ajout-post input[type="titre"] {
+ 	font-size: 16px;
+ 	font-weight: 400;
+ 	background-color: rgb(250, 250, 251);
+ 	width: 80.9375%;
+ 	height: 40px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	padding-left: 14px;
+ 	border-radius: 3px;
+ 	margin-top: 10px;
+ 	border: none;
+ }
+ 
+ .formulaire-ajout-post input[type="button"] {
+ 	font-family: 'Lato', sans-serif;
+ 	font-weight: 300;
+ 	background-color: rgb(250, 250, 251);
+ 	width: 80.9375%;
+ 	height: 184px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	border-radius: 3px;
+ 	margin-top: 10px;
+ 	border: none;
+ 	font-size: 60px;
+ }
+ 
+ .formulaire-ajout-post input[type="text"] {
+ 	font-family: 'Lato', sans-serif;
+ 	font-size: 16px;
+ 	font-weight: 400;
+ 	background-color: rgb(250, 250, 251);
+ 	width: 80.9375%;
+ 	height: 117px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	padding-left: 14px;
+ 	padding-top: -20px;
+ 	border-radius: 3px;
+ 	margin-top: 10px;
+ 	border: none;
+ }
+ 
+ .formulaire-pictos-post {
+ 	text-align: center;
+ }
+ 
+ .formulaire-pictos-post > form {
+ 	padding-top: 10px;
+ 	display: inline-flex;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ }
+ 
+ .formulaire-pictos-post >form > a#edition-picto {
+ 	background-color: rgb(2, 136, 209);
+ 	width: 82px;
+ 	height: 40px;
+ 	border-radius: 3px;
+ 	background-image: url(img/picto-edition.png);
+ 	background-repeat: no-repeat;
+ 	background-position: center;
+ 	margin-right: 6px;
+ }
+ 
+ .formulaire-pictos-post >form > a#geolocalisation-picto {
+ 	background-color: rgb(2, 136, 209);
+ 	width: 82px;
+ 	height: 40px;
+ 	border-radius: 3px;
+ 	background-image: url(img/picto-geolocalisation.png);
+ 	background-repeat: no-repeat;
+ 	background-position: center;
+ 	margin-right: 6px;
+ }
+ 
+ .formulaire-pictos-post input[type="submit"] {
+ 	background-color: rgb(255, 228, 64);
+ 	width: 82px;
+ 	height: 40px;
+ 	border-radius: 3px;
+ 	background-image: url(img/picto-envoie.png);
+ 	background-repeat: no-repeat;
+ 	background-position: center;
+ 	margin-right: 6px;
+ 	border: none;
+ }

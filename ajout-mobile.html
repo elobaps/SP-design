@@ -21,24 +21,32 @@
 	</script>
 	<div class="main">
 		<!--   Contenu principal-->
-		<div class="bloc-ajout-container">
-			<div class="heading-ajout">
-				<h2>Ajout d'une photo ou d'une vidéo</h2>
-			</div>
-			<div class="formulaire-ajout-post">
-				<form name="ajout-post" action="#" method="post">
-					<input type="titre" name="titre" placeholder="Titre/humeur">
-					<input type="file" id="hiddenfile" style="display:none" />
-					<input type="button" value="+" onclick="getfile()" />
-					<input type="text" name="description" placeholder="Description">
-				</form>
-			</div>
-			<div class="formulaire-pictos-post">
-				<form name="ajout-post-pictos" action="#" method="post">
-					<a href="#1" id="edition-picto" title="Editer la photo"></a>
-					<a href="#2" id="geolocalisation-picto" title="Se géocaliser"></a>
-					<input type="submit" name="Envoyer-post" id="picto-envoyer" value="">
-				</form>
+		<div class="section">
+			<div class="grid">
+				<div class="row">
+					<div class="col col-4">
+						<div class="bloc-ajout-container">
+							<div class="heading-ajout">
+								<h2>Ajout d'une photo ou d'une vidéo</h2>
+							</div>
+							<div class="formulaire-ajout-post">
+								<form name="ajout-post" action="#" method="post">
+									<input type="titre" name="titre" placeholder="Titre/humeur">
+									<input type="file" id="hiddenfile" style="display:none" />
+									<input type="button" value="+" onclick="getfile()" />
+									<input type="text" name="description" placeholder="Description">
+								</form>
+							</div>
+							<div class="formulaire-pictos-post">
+								<form name="ajout-post-pictos" action="#" method="post">
+									<a href="#1" id="edition-picto" title="Editer la photo"></a>
+									<a href="#2" id="geolocalisation-picto" title="Se géocaliser"></a>
+									<input type="submit" name="Envoyer-post" id="picto-envoyer" value="">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
