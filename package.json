@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/elobaps/SP-design/issues"
   },
-  "homepage": "https://github.com/elobaps/SP-design#readme"
+  "homepage": "https://github.com/elobaps/SP-design#readme",
+  "devDependencies": {
+    "browser-sync": "^2.7.12"
+  }
 }
